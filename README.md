@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Hogwarts Academy — TypeScript Mini Project
 
 A small terminal project to practice:
@@ -36,3 +37,6 @@ npm run typecheck
 
 This project intentionally uses the legacy TypeScript decorator API so you can learn the three method-decorator arguments:
 `target`, `propertyKey`, and `descriptor`. The project enables `experimentalDecorators` in `tsconfig.json`.
+=======
+# tp-ts
+>>>>>>> 418fd7cb9d06aa3dfc7b1acba1bf9082d3a03122
