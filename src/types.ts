@@ -29,6 +29,9 @@ export type AcademyEvent =
   | { type: "level-up"; wizardId: number; newLevel: number }
   | { type: "wizard-expelled"; wizardId: number };
 
+// Exercise 3:
+export type SpellCastEvent = Extract<AcademyEvent, { type: "spell-cast" }>;
+
 // Conditional type: choose an output type based on the spell category.
 export type SpellOutput<T extends SpellCategory> =
   T extends "attack" ? number :
@@ -41,7 +44,11 @@ export type ArrayElement<T> =
   T extends (infer Item)[] ? Item : never;
 
 // Utility type examples.
-export type NewWizard = Omit<Wizard, "id">;
+// Utility type examples.
+export type NewWizard = Omit<
+  Pick<Wizard, "id" | "name" | "house" | "level" | "active">,
+  "id"
+>;
 export type WizardSummary = Pick<Wizard, "id" | "name" | "house">;
 export type WizardUpdate = Partial<Wizard>;
 
